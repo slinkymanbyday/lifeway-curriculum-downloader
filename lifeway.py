@@ -76,7 +76,7 @@ for page in other_pages:
     r = s.get(HOST + page)
     page_soup = BeautifulSoup(r.text, 'html.parser')
     for curr in page_soup.select(".curriculumList a"):
-    curriculums.add(curr.attrs['href'])
+        curriculums.add(curr.attrs['href'])
 
 for curr in curriculums:
     downloaded_items = 0
